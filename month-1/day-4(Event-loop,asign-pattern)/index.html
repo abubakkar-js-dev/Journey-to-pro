@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h2>Javascript Async pattern</h2>
+    <button type="button" id="stop">Stop</button>
+
+
+    <script>
+        const stop = document.getElementById('stop');
+        
+        const sayName = (name)=>{
+            console.log(`My Name is ${name}`);
+        }
+
+        const changeText = ()=>{
+            document.querySelector('h2').innerText = 'changed text';
+        }
+        // changeText();
+
+       const changeNow = setTimeout(changeText, 2000);
+
+        stop.addEventListener('click',()=>{
+            console.log('Stop button clicked');
+
+            clearTimeout(changeNow);
+        })
+
+    </script>
+</body>
+</html>
