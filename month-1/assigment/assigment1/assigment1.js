@@ -134,3 +134,95 @@ person1.speak();
 const student1 = new Student("Rahim", "Economics");
 student1.speak();
 console.log(student1.alive); 
+
+
+
+// TASK-4
+
+//  Event Loop: Javascript is single-threaded language thats means it can run or execute one task at a time. However, it's handles asyncronous operations efficiently using event loop which manage the execution of microtask and macrotask.
+
+
+// Microtask: It is high priority and will execute first. Promises(then,catch,finally),Mutation Observer queuemicrotask are inclues in this areas.
+
+// Macrotask: This is lower priority, and it will execute later. setTimeOut,setInterval,setImmediate are inclue in macrotask.
+
+
+// example-1
+
+console.log('I am first');
+
+setTimeout(() => {
+  console.log('I am Second ');  
+}, 2000);
+
+
+console.log('I am third');
+
+
+const promies = new Promise((resolve,reject)=>{
+  const sucess = true;
+  setTimeout(() => {
+    if(sucess){
+      resolve('Promise is resolved');
+    }else{
+      reject('Promise is rejected');
+    }
+  }, 3000);
+});
+
+// promies.then((result)=>{
+//   console.log(result);
+// })
+// .catch(error=>{
+//   console.log(error);
+// })
+// .finally(()=>{
+//   console.log('The promise finished.');
+// })
+
+// using async await
+
+async function getResult(){
+  try{
+    const res = await promies;
+    console.log(res);
+  }catch(err){
+    console.log(err);
+  }finally{
+    console.log('The promise finished');
+  }
+}
+
+// getResult();
+
+
+// example-2
+ 
+async function fetchData(url){
+  const res = await fetch(url);
+  const data = await res.json();
+  return data;
+};
+
+let products = [];
+
+const getProducts = async()=>{
+  const productsResult = await fetchData('https://fakestoreapi.com/products');
+  products = productsResult;
+  return products;
+
+}
+
+(async()=>{
+  await getProducts();
+  console.log(products,'Products');
+})()
+
+
+
+
+
+
+
+
+

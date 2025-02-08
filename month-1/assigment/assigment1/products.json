@@ -1,0 +1,24 @@
+[
+    {
+      "id": 101,
+      "name": "Smartphone X",
+      "brand": "TechOne",
+      "price": 699.99,
+      "inStock": true
+    },
+    {
+      "id": 102,
+      "name": "Laptop Pro 15",
+      "brand": "CompuTech",
+      "price": 1299.99,
+      "inStock": false
+    },
+    {
+      "id": 103,
+      "name": "Wireless Earbuds",
+      "brand": "SoundMax",
+      "price": 149.99,
+      "inStock": true
+    }
+  ]
+  
