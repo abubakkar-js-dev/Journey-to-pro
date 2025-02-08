@@ -1,0 +1,44 @@
+ Assignment: JavaScript Core Concepts Mastery
+
+
+🔹 Task 1: Execution Context & Call Stack
+
+Explain the Global Execution Context, Hoisting, and Temporal Dead Zone (TDZ) with examples.
+Write a JavaScript function that demonstrates hoisting behavior.
+Simulate a call stack overflow using recursion.
+
+
+🔹 Task 2: Closures & Lexical Scope
+
+Explain Lexical Scope with a real-world analogy.
+Implement a memoization function using closures to optimize an expensive computation.
+Create a private counter using closures that supports increment, decrement, and reset.
+
+
+🔹 Task 3: Prototypes & Inheritance
+
+Explain the Prototype Chain with a diagram.
+Create a custom constructor function and attach methods using prototype.
+Implement prototypal inheritance by extending an object’s functionality.
+
+
+🔹 Task 4: Event Loop & Async Patterns
+
+Explain Event Loop, Microtasks, and Macrotasks with an example.
+Write code that demonstrates the order of execution of setTimeout, Promise, and async/await.
+Implement a function that fetches data using async/await, handles errors, and logs execution order.
+
+
+🔹 Task 5: Memory Management & Optimization
+Identify potential memory leaks in a given piece of JavaScript code and suggest improvements.
+Implement a WeakMap-based caching system to store temporary data.
+Use Chrome DevTools Memory Profiling to analyze a function’s memory consumption and optimize it.
+
+
+📜 Submission Guidelines:
+
+✔ Write explanations and code snippets for each task.
+✔ Submit a GitHub repository or a Notion document with solutions.
+✔ Include screenshots of memory profiling results for Task 5.
+
+Would you like me to refine or expand any section? 🚀
